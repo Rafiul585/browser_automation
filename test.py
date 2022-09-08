@@ -33,5 +33,9 @@
 
 import pandas as pd
 
-df = pd.read_excel('esad_member_list.xlsx')
-print(df)
+df = pd.read_excel('esad_member_list.xlsx', usecols='B:E')
+df_to_list = df.values.tolist()
+# print(df_to_list)
+
+for id in df_to_list:
+    print(id[0])
